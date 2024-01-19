@@ -127,6 +127,10 @@ body {
   color: #f23802;
 }
 
+.business-cards {
+  font-family: "Josefin Sans", sans-serif;
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     display: none;
