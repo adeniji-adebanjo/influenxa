@@ -1,0 +1,136 @@
+@import "variables";
+
+@mixin button {
+  background-color: $font-color-base;
+  border-radius: 5px;
+  color: $font-color-white;
+  padding: 8px 15px;
+  border: none;
+  font-family: $font-family-base;
+  &:hover {
+    border: 1px solid $font-color-base;
+    color: $font-color-base;
+    background: $font-color-white;
+  }
+}
+@mixin font {
+  font-family: $font-family-base;
+}
+
+@mixin title-span {
+  font-family: $font-family-base;
+  h2 span {
+    color: $font-color-base;
+  }
+}
+
+body {
+  font-family: $font-family-base;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+// Navigation bar styles
+.hero-section {
+  // position: relative;
+  color: white;
+  text-align: center;
+  font-family: $font-family-base;
+  @include title-span;
+}
+.navbar {
+  background-color: transparent !important;
+  @include font;
+}
+
+// Partner logos
+.partners {
+  //   display: inline-flex;
+  //   align-items: flex-start;
+  //   flex-direction: column;
+  //   gap: 10px;
+  padding: 50px 140px;
+  @include font;
+  background-color: $partners-bg-color;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.campaign {
+  top: 10em;
+  @include font;
+  @include title-span;
+
+  button {
+    @include button;
+  }
+  .custom-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .custom-list li {
+    margin-bottom: 0.5em; /* Adjust as needed */
+  }
+
+  .custom-list li:before {
+    content: "\f105"; /* Unicode character for the fa-angles-right icon */
+    font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
+    margin-right: 0.5em; /* Adjust as needed */
+    color: #333; /* Adjust the color as needed */
+  }
+}
+
+// Services cards section
+.services {
+  padding: 5em;
+  @include font;
+  justify-content: center;
+  //   margin: 0 5em;
+  .services-card {
+    border: 0 0 0 2px solid $font-color-base;
+    padding: 0 1em;
+  }
+}
+.reachout-card {
+  @include font;
+  @include title-span;
+  p {
+    color: $font-color-secondary;
+  }
+  button {
+    @include button;
+    background-color: $font-color-base;
+  }
+}
+.team-reachout {
+  padding: 50px 70px;
+  background-color: $partners-bg-color;
+  @include font;
+  justify-content: space-between;
+
+  button {
+    @include button;
+  }
+}
+.ads-1 {
+  @include font;
+  @include title-span;
+}
+
+// Mobile responsiveness
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-toggler[aria-expanded="true"] + .navbar-collapse .navbar-nav {
+    display: block !important;
+  }
+
+  .hero-section {
+    margin-top: 10rem;
+  }
+}

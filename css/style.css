@@ -1,0 +1,140 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hero-section {
+  color: white;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+.hero-section h2 span {
+  color: #f23802;
+}
+
+.navbar {
+  background-color: transparent !important;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.partners {
+  padding: 50px 140px;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #f5e2d4;
+}
+.partners img {
+  max-width: 100%;
+  height: auto;
+}
+
+.campaign {
+  top: 10em;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+.campaign h2 span {
+  color: #f23802;
+}
+.campaign button {
+  background-color: #f23802;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+.campaign button:hover {
+  border: 1px solid #f23802;
+  color: #f23802;
+  background: #fff;
+}
+.campaign .custom-list {
+  list-style: none;
+  padding: 0;
+}
+.campaign .custom-list li {
+  margin-bottom: 0.5em; /* Adjust as needed */
+}
+.campaign .custom-list li:before {
+  content: "\f105"; /* Unicode character for the fa-angles-right icon */
+  font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
+  margin-right: 0.5em; /* Adjust as needed */
+  color: #333; /* Adjust the color as needed */
+}
+
+.services {
+  padding: 5em;
+  font-family: "Josefin Sans", sans-serif;
+  justify-content: center;
+}
+.services .services-card {
+  border: 0 0 0 2px solid #f23802;
+  padding: 0 1em;
+}
+
+.reachout-card {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+.reachout-card h2 span {
+  color: #f23802;
+}
+.reachout-card p {
+  color: #939393;
+}
+.reachout-card button {
+  background-color: #f23802;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #f23802;
+}
+.reachout-card button:hover {
+  border: 1px solid #f23802;
+  color: #f23802;
+  background: #fff;
+}
+
+.team-reachout {
+  padding: 50px 70px;
+  background-color: #f5e2d4;
+  font-family: "Josefin Sans", sans-serif;
+  justify-content: space-between;
+}
+.team-reachout button {
+  background-color: #f23802;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+.team-reachout button:hover {
+  border: 1px solid #f23802;
+  color: #f23802;
+  background: #fff;
+}
+
+.ads-1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+.ads-1 h2 span {
+  color: #f23802;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-toggler[aria-expanded=true] + .navbar-collapse .navbar-nav {
+    display: block !important;
+  }
+  .hero-section {
+    margin-top: 10rem;
+  }
+}

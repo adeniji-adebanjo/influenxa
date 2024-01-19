@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-vBbFY8FfrGJ2gVl5YqE0VIGoM1FYtlgH2TwJIHE9n1cHTA8RiYQJ7jTf75r+oX1N5A2exLL3dNqFtOhPmLZIyWA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
+      rel="stylesheet"
+    />
+
+    <!-- Optional: Bootstrap Icons (if needed) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css"
+      integrity="sha384-o1e03fSpJjLsdZl/POWeLWha14YUAfx3lraKEqzUeE1CkOWIErV4c7G7G5rVO5CE"
+      crossorigin="anonymous"
+    />
+    <title>Influenxa</title>
+  </head>
+  <body>
+    <!-- Navbar begins -->
+    <!-- Transparent Navbar -->
+    <!-- <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="15"
+      height="160"
+      viewBox="0 0 15 160"
+      fill="none"
+    >
+      <path
+        d="M12.0706 157.06C12.0706 157.403 11.9581 157.738 11.7331 158.066C11.5082 158.394 11.2168 158.625 10.8589 158.759L10.4601 158.491L15 158.86L15 160L5.38344 159.128L5.38344 158.133L6.94786 158.155L6.50307 158.412C6.12475 158.099 5.818 157.76 5.58282 157.395C5.33743 157.03 5.21473 156.672 5.21473 156.322C5.21473 155.927 5.33743 155.565 5.58282 155.237C5.82822 154.909 6.17076 154.649 6.61043 154.455C7.03988 154.261 7.54602 154.164 8.12884 154.164C8.83436 154.164 9.48876 154.287 10.092 154.533C10.6851 154.772 11.1656 155.107 11.5337 155.539C11.8916 155.972 12.0706 156.478 12.0706 157.06ZM10.7515 157.082C10.7515 156.732 10.6442 156.426 10.4295 156.165C10.2045 155.904 9.90798 155.703 9.53988 155.562C9.17178 155.413 8.78323 155.338 8.37424 155.338C8.00614 155.338 7.67894 155.401 7.39264 155.528C7.10634 155.655 6.8865 155.822 6.73313 156.031C6.56953 156.24 6.48773 156.471 6.48773 156.724C6.48773 156.955 6.54908 157.172 6.67178 157.373C6.79448 157.567 6.96831 157.742 7.19325 157.898C7.40798 158.055 7.67383 158.181 7.9908 158.278L9.23313 158.39C9.40696 158.368 9.58589 158.327 9.76994 158.267C9.94377 158.2 10.1074 158.114 10.2607 158.01C10.4039 157.906 10.5215 157.779 10.6135 157.63C10.7055 157.473 10.7515 157.291 10.7515 157.082Z"
+        fill="black"
+      />
+      <path
+        d="M5.4908 151.516L7.02454 151.595C6.63599 151.438 6.3088 151.241 6.04295 151.002C5.7771 150.764 5.57771 150.514 5.44479 150.253C5.30164 149.992 5.23006 149.757 5.23006 149.549L6.79448 149.75C6.76381 150.093 6.85583 150.41 7.07055 150.7C7.28528 150.983 7.57158 151.214 7.92945 151.393C8.28732 151.572 8.67076 151.68 9.07976 151.718L11.9172 151.975L11.9172 153.115L5.4908 152.545L5.4908 151.516Z"
+        fill="black"
+      />
+      <path
+        d="M12.0706 146.618C12.0706 146.908 12.0092 147.203 11.8865 147.501C11.7536 147.799 11.5542 148.071 11.2883 148.317C11.0225 148.556 10.6953 148.749 10.3068 148.898C9.90798 149.047 9.44274 149.122 8.91105 149.122C8.51227 149.122 8.10327 149.074 7.68405 148.977C7.2546 148.88 6.85583 148.723 6.48773 148.507C6.11963 148.291 5.82311 148.011 5.59816 147.669C5.36299 147.318 5.2454 146.897 5.2454 146.405C5.2454 145.973 5.37321 145.571 5.62884 145.198C5.87423 144.818 6.23211 144.508 6.70246 144.27C7.16258 144.031 7.73006 143.912 8.40491 143.912C8.67076 143.912 8.9724 143.942 9.30982 144.002C9.63702 144.054 9.96422 144.143 10.2914 144.27C10.6084 144.389 10.9049 144.553 11.181 144.762C11.4468 144.971 11.6616 145.228 11.8252 145.533C11.9888 145.839 12.0706 146.2 12.0706 146.618ZM10.7669 146.584C10.7669 146.219 10.6442 145.928 10.3988 145.712C10.1534 145.489 9.85174 145.328 9.49387 145.231C9.136 145.135 8.79346 145.086 8.46626 145.086C8.10839 145.086 7.80675 145.131 7.56135 145.22C7.31595 145.302 7.12168 145.414 6.97853 145.556C6.82516 145.697 6.71268 145.846 6.64111 146.003C6.56953 146.159 6.53374 146.308 6.53374 146.45C6.53374 146.8 6.65644 147.091 6.90184 147.322C7.13702 147.546 7.43354 147.71 7.79141 147.814C8.14929 147.911 8.49694 147.959 8.83436 147.959C9.29448 147.959 9.66769 147.888 9.95399 147.747C10.2403 147.605 10.4499 147.426 10.5828 147.21C10.7055 146.994 10.7669 146.785 10.7669 146.584Z"
+        fill="black"
+      />
+      <path
+        d="M12.0706 139.912C12.0706 140.352 11.9427 140.721 11.6871 141.019C11.4315 141.317 11.1094 141.548 10.7209 141.712L10.3068 141.556L11.9172 141.701L11.9172 142.853L-7.95962e-07 141.791L-8.46297e-07 140.639L6.84049 141.254L6.28835 141.232C5.9816 141.038 5.73108 140.784 5.53681 140.471C5.33231 140.151 5.23006 139.797 5.23006 139.409C5.23006 139.007 5.34765 138.638 5.58282 138.302C5.818 137.967 6.17587 137.699 6.65644 137.497C7.13702 137.296 7.73006 137.196 8.43558 137.196C9.04908 137.196 9.63702 137.304 10.1994 137.52C10.7515 137.736 11.2014 138.049 11.5491 138.459C11.8967 138.861 12.0706 139.346 12.0706 139.912ZM10.7362 140.035C10.7362 139.73 10.6646 139.473 10.5215 139.264C10.3783 139.055 10.1994 138.887 9.98467 138.761C9.75972 138.627 9.51943 138.53 9.26381 138.47C9.00818 138.41 8.76278 138.381 8.52761 138.381C8.10839 138.381 7.7454 138.44 7.43865 138.56C7.1319 138.671 6.89673 138.835 6.73313 139.051C6.55931 139.268 6.47239 139.521 6.47239 139.812C6.47239 140.169 6.60021 140.482 6.85583 140.751C7.11145 141.012 7.44888 141.205 7.8681 141.332L9.20246 141.466C9.36606 141.429 9.53988 141.377 9.72393 141.31C9.89775 141.235 10.0614 141.142 10.2147 141.03C10.3681 140.918 10.4959 140.781 10.5982 140.617C10.6902 140.453 10.7362 140.259 10.7362 140.035Z"
+        fill="black"
+      />
+      <path
+        d="M12.0706 133.746C12.0706 134.036 12.0092 134.331 11.8865 134.629C11.7536 134.927 11.5542 135.199 11.2883 135.445C11.0225 135.684 10.6953 135.877 10.3068 136.026C9.90798 136.175 9.44274 136.25 8.91105 136.25C8.51227 136.25 8.10327 136.202 7.68405 136.105C7.2546 136.008 6.85583 135.851 6.48773 135.635C6.11963 135.419 5.82311 135.139 5.59816 134.797C5.36299 134.446 5.2454 134.025 5.2454 133.533C5.2454 133.101 5.37321 132.699 5.62883 132.326C5.87423 131.946 6.23211 131.636 6.70245 131.398C7.16258 131.159 7.73006 131.04 8.40491 131.04C8.67076 131.04 8.97239 131.07 9.30982 131.13C9.63702 131.182 9.96422 131.271 10.2914 131.398C10.6084 131.517 10.9049 131.681 11.181 131.89C11.4468 132.099 11.6616 132.356 11.8252 132.661C11.9888 132.967 12.0706 133.328 12.0706 133.746ZM10.7669 133.712C10.7669 133.347 10.6442 133.056 10.3988 132.84C10.1534 132.617 9.85174 132.456 9.49387 132.359C9.13599 132.263 8.79346 132.214 8.46626 132.214C8.10839 132.214 7.80675 132.259 7.56135 132.348C7.31595 132.43 7.12168 132.542 6.97853 132.684C6.82515 132.825 6.71268 132.974 6.64111 133.131C6.56953 133.287 6.53374 133.436 6.53374 133.578C6.53374 133.928 6.65644 134.219 6.90184 134.45C7.13702 134.674 7.43354 134.838 7.79141 134.942C8.14929 135.039 8.49693 135.087 8.83436 135.087C9.29448 135.087 9.66769 135.016 9.95399 134.875C10.2403 134.733 10.4499 134.554 10.5828 134.338C10.7055 134.122 10.7669 133.913 10.7669 133.712Z"
+        fill="black"
+      />
+      <path
+        d="M10.7362 124.125C10.7362 123.953 10.6953 123.785 10.6135 123.621C10.5215 123.45 10.409 123.29 10.2761 123.141L11.5031 122.727C11.6769 122.958 11.8149 123.208 11.9172 123.476C12.0092 123.737 12.0552 123.994 12.0552 124.248C12.0552 124.739 11.9325 125.175 11.6871 125.556C11.4315 125.928 11.0634 126.219 10.5828 126.428C10.092 126.636 9.49898 126.741 8.80368 126.741C8.38446 126.741 7.97035 126.685 7.56135 126.573C7.14213 126.454 6.75869 126.286 6.41104 126.07C6.0634 125.846 5.78221 125.563 5.56748 125.22C5.35276 124.877 5.2454 124.479 5.2454 124.024C5.2454 123.748 5.29652 123.484 5.39877 123.23C5.4908 122.969 5.6544 122.735 5.88957 122.526C6.11452 122.31 6.42638 122.127 6.82515 121.978C7.2137 121.829 7.7045 121.721 8.29755 121.654L9.76994 125.611L8.83436 125.79L7.56135 122.481L7.77608 122.884C7.38753 122.958 7.07567 123.1 6.84049 123.308C6.60532 123.517 6.48773 123.767 6.48773 124.057C6.48773 124.385 6.58998 124.665 6.79448 124.896C6.98875 125.12 7.24949 125.291 7.57669 125.41C7.90389 125.529 8.25153 125.589 8.61963 125.589C9.11043 125.589 9.51432 125.518 9.83129 125.377C10.138 125.235 10.3681 125.052 10.5215 124.829C10.6646 124.605 10.7362 124.37 10.7362 124.125Z"
+        fill="black"
+      />
+      <path
+        d="M-1.76331e-06 119.66L-1.81413e-06 118.498L11.9172 119.571L11.9172 120.711L-1.76331e-06 119.66Z"
+        fill="black"
+      />
+      <path
+        d="M12.0706 115.415C12.0706 115.705 12.0092 116 11.8865 116.298C11.7536 116.596 11.5542 116.868 11.2883 117.114C11.0225 117.353 10.6953 117.546 10.3068 117.695C9.90798 117.845 9.44274 117.919 8.91105 117.919C8.51227 117.919 8.10327 117.871 7.68405 117.774C7.2546 117.677 6.85583 117.52 6.48773 117.304C6.11963 117.088 5.82311 116.809 5.59816 116.466C5.36299 116.115 5.2454 115.694 5.2454 115.202C5.2454 114.77 5.37321 114.368 5.62883 113.995C5.87423 113.615 6.23211 113.306 6.70245 113.067C7.16258 112.829 7.73006 112.709 8.40491 112.709C8.67076 112.709 8.97239 112.739 9.30982 112.799C9.63702 112.851 9.96422 112.94 10.2914 113.067C10.6084 113.186 10.9049 113.35 11.181 113.559C11.4468 113.768 11.6616 114.025 11.8252 114.33C11.9888 114.636 12.0706 114.997 12.0706 115.415ZM10.7669 115.381C10.7669 115.016 10.6442 114.725 10.3988 114.509C10.1534 114.286 9.85174 114.125 9.49387 114.029C9.13599 113.932 8.79346 113.883 8.46626 113.883C8.10838 113.883 7.80675 113.928 7.56135 114.017C7.31595 114.099 7.12168 114.211 6.97853 114.353C6.82515 114.494 6.71268 114.643 6.64111 114.8C6.56953 114.956 6.53374 115.105 6.53374 115.247C6.53374 115.597 6.65644 115.888 6.90184 116.119C7.13701 116.343 7.43354 116.507 7.79141 116.611C8.14929 116.708 8.49693 116.756 8.83436 116.756C9.29448 116.756 9.66769 116.686 9.95399 116.544C10.2403 116.402 10.4499 116.223 10.5828 116.007C10.7055 115.791 10.7669 115.582 10.7669 115.381Z"
+        fill="black"
+      />
+      <path
+        d="M12.0552 109.593C12.0552 109.958 11.9325 110.308 11.6871 110.643C11.4417 110.971 11.089 111.243 10.6288 111.46C10.1687 111.668 9.62168 111.773 8.98773 111.773C8.49693 111.773 8.02659 111.706 7.57669 111.571C7.12679 111.437 6.72802 111.251 6.38037 111.012C6.02249 110.766 5.74131 110.483 5.53681 110.163C5.32209 109.835 5.21472 109.485 5.21472 109.112C5.21472 108.627 5.34765 108.247 5.6135 107.972C5.87935 107.688 6.18609 107.483 6.53374 107.357L6.77914 107.468L5.4908 107.267L5.4908 106.194L15 107.055L15 108.195L10.3374 107.781L10.6902 107.48C10.772 107.524 10.8896 107.603 11.0429 107.714C11.1861 107.826 11.3395 107.972 11.5031 108.15C11.6564 108.322 11.7894 108.531 11.9018 108.776C12.0041 109.015 12.0552 109.287 12.0552 109.593ZM10.7975 109.268C10.7975 109.037 10.7362 108.825 10.6135 108.631C10.4908 108.43 10.3221 108.251 10.1074 108.094C9.88241 107.931 9.61657 107.8 9.30982 107.703L8.06748 107.569C7.88344 107.591 7.7045 107.636 7.53068 107.703C7.34663 107.77 7.18303 107.856 7.03988 107.96C6.8865 108.065 6.7638 108.195 6.67178 108.352C6.57975 108.508 6.53374 108.694 6.53374 108.911C6.53374 109.253 6.64622 109.559 6.87117 109.827C7.08589 110.088 7.3773 110.293 7.7454 110.442C8.10327 110.584 8.49182 110.655 8.91104 110.655C9.27914 110.655 9.60634 110.591 9.89264 110.465C10.1789 110.338 10.4039 110.17 10.5675 109.962C10.7209 109.745 10.7975 109.514 10.7975 109.268Z"
+        fill="black"
+      />
+      <path
+        d="M12.1779 103.536C12.1779 103.961 12.0041 104.3 11.6564 104.553C11.2986 104.799 10.8384 104.9 10.2761 104.855L5.4908 104.43L5.4908 103.29L9.72393 103.67C10.0409 103.685 10.3016 103.637 10.5061 103.525C10.7106 103.413 10.818 103.227 10.8282 102.966C10.8282 102.705 10.726 102.466 10.5215 102.25C10.3068 102.027 10.0205 101.84 9.66258 101.691C9.29448 101.542 8.87526 101.449 8.40491 101.412L5.4908 101.155L5.4908 100.003L11.9172 100.584L11.9172 101.624L10.4448 101.579L10.6595 101.535C10.9458 101.661 11.2065 101.825 11.4417 102.027C11.6667 102.228 11.8456 102.459 11.9785 102.72C12.1115 102.973 12.1779 103.245 12.1779 103.536Z"
+        fill="black"
+      />
+      <path
+        d="M10.7362 96.317C10.7362 96.1456 10.6953 95.9779 10.6135 95.8139C10.5215 95.6425 10.409 95.4823 10.2761 95.3332L11.5031 94.9196C11.6769 95.1506 11.8149 95.4003 11.9172 95.6686C12.0092 95.9295 12.0552 96.1866 12.0552 96.44C12.0552 96.9319 11.9325 97.3679 11.6871 97.748C11.4315 98.1207 11.0634 98.4114 10.5828 98.6201C10.092 98.8288 9.49898 98.9331 8.80368 98.9331C8.38446 98.9331 7.97035 98.8772 7.56135 98.7654C7.14213 98.6462 6.75869 98.4785 6.41104 98.2623C6.06339 98.0387 5.78221 97.7555 5.56748 97.4127C5.35276 97.0698 5.2454 96.6711 5.2454 96.2164C5.2454 95.9406 5.29652 95.6761 5.39877 95.4227C5.4908 95.1618 5.6544 94.927 5.88957 94.7183C6.11452 94.5022 6.42638 94.3196 6.82515 94.1705C7.2137 94.0215 7.7045 93.9134 8.29755 93.8463L9.76994 97.8039L8.83436 97.9828L7.56135 94.6736L7.77607 95.0761C7.38753 95.1506 7.07566 95.2922 6.84049 95.5009C6.60532 95.7096 6.48773 95.9593 6.48773 96.25C6.48773 96.5779 6.58998 96.8574 6.79448 97.0884C6.98875 97.312 7.24949 97.4835 7.57669 97.6027C7.90389 97.722 8.25153 97.7816 8.61963 97.7816C9.11043 97.7816 9.51432 97.7108 9.83129 97.5692C10.138 97.4276 10.3681 97.245 10.5215 97.0214C10.6646 96.7978 10.7362 96.563 10.7362 96.317Z"
+        fill="black"
+      />
+      <path
+        d="M5.4908 91.3049L6.91718 91.3049L6.70245 91.3832C6.26278 91.1745 5.91002 90.8987 5.64417 90.5559C5.3681 90.2056 5.23006 89.8031 5.23006 89.3484C5.23006 88.9013 5.409 88.551 5.76687 88.2976C6.12474 88.0367 6.58998 87.9286 7.16258 87.9733L11.9172 88.3982L11.9172 89.5497L7.71472 89.1696C7.3773 89.1472 7.10634 89.1994 6.90184 89.3261C6.69734 89.4453 6.59509 89.6466 6.59509 89.9298C6.59509 90.1907 6.69734 90.4366 6.90184 90.6677C7.10634 90.8913 7.39264 91.0739 7.76074 91.2155C8.11861 91.3571 8.53272 91.4503 9.00307 91.495L11.9172 91.7633L11.9172 92.9036L5.4908 92.3335L5.4908 91.3049Z"
+        fill="black"
+      />
+      <path
+        d="M2.66871 85.3961L2.66871 84.2446L5.50613 84.4906L5.50613 83.2384L6.74847 83.3502L6.74847 84.6024L11.9172 85.0607L11.9172 86.2123L6.74847 85.7539L6.74847 86.5812L5.50613 86.4694L5.50613 85.6421L2.66871 85.3961Z"
+        fill="black"
+      />
+      <path
+        d="M5.4908 81.9616L5.4908 80.8213L11.9172 81.3914L11.9172 82.5429L5.4908 81.9616ZM3.32822 81.8833C3.07259 81.8759 2.85787 81.8051 2.68405 81.6709C2.51022 81.5368 2.42331 81.3691 2.42331 81.1678C2.42331 81.0113 2.48977 80.866 2.6227 80.7318C2.7454 80.5902 2.94478 80.5231 3.22086 80.5306C3.47648 80.5306 3.6912 80.5977 3.86503 80.7318C4.03885 80.866 4.12576 81.0337 4.12576 81.2349C4.12576 81.384 4.06441 81.5293 3.94172 81.6709C3.80879 81.8125 3.60429 81.8833 3.32822 81.8833Z"
+        fill="black"
+      />
+      <path
+        d="M12.0399 77.7494C12.0501 78.0848 11.9325 78.409 11.6871 78.7221C11.4315 79.0277 11.0685 79.2773 10.5982 79.4711C10.1278 79.6575 9.57055 79.7506 8.92638 79.7506C8.48671 79.7506 8.05215 79.6947 7.6227 79.5829C7.18303 79.4637 6.78425 79.2922 6.42638 79.0686C6.05828 78.8376 5.76687 78.5618 5.55215 78.2413C5.3272 77.9134 5.21472 77.5445 5.21472 77.1346C5.21472 76.7992 5.28118 76.5197 5.41411 76.2961C5.53681 76.065 5.70041 75.875 5.90491 75.7259C6.09918 75.5768 6.32413 75.4613 6.57975 75.3793L6.85583 75.4799L5.4908 75.234L5.4908 74.1831L11.9172 74.7421L11.9172 75.8936L10.3374 75.7594L10.7362 75.67C10.8078 75.7147 10.9151 75.793 11.0583 75.9048C11.2014 76.0091 11.3497 76.147 11.5031 76.3184C11.6564 76.4899 11.7894 76.6948 11.9018 76.9333C12.0041 77.1718 12.0501 77.4439 12.0399 77.7494ZM10.7822 77.1122C10.7822 76.9035 10.726 76.706 10.6135 76.5197C10.4908 76.3333 10.3221 76.1656 10.1074 76.0166C9.89264 75.8675 9.63701 75.752 9.34049 75.67L8.00613 75.5582C7.70961 75.588 7.44887 75.6663 7.22393 75.793C6.99898 75.9122 6.82515 76.0725 6.70245 76.2737C6.57975 76.4675 6.5184 76.6874 6.5184 76.9333C6.5184 77.2314 6.59509 77.4848 6.74847 77.6935C6.89161 77.8948 7.07566 78.0625 7.30061 78.1966C7.52556 78.3233 7.76585 78.4165 8.02147 78.4761C8.2771 78.5358 8.51738 78.5656 8.74233 78.5656C9.1411 78.5656 9.49387 78.5059 9.80061 78.3867C10.1074 78.26 10.3476 78.0886 10.5215 77.8724C10.6953 77.6488 10.7822 77.3954 10.7822 77.1122Z"
+        fill="black"
+      />
+      <path
+        d="M5.4908 71.38L6.91718 71.4024L6.68712 71.4359C6.23722 71.2049 5.88446 70.9254 5.62883 70.5974C5.36298 70.2695 5.23006 69.8968 5.23006 69.4795C5.23006 69.0994 5.34253 68.7975 5.56748 68.5739C5.79243 68.3428 6.12985 68.2087 6.57975 68.1714L6.61043 68.205C6.20143 67.9739 5.86912 67.6944 5.6135 67.3665C5.35787 67.0386 5.23006 66.6994 5.23006 66.3491C5.23006 65.887 5.409 65.5405 5.76687 65.3094C6.12474 65.0709 6.58487 64.9703 7.14724 65.0076L11.9172 65.4324L11.9172 66.5839L7.7454 66.2038C7.42842 66.1889 7.16258 66.2187 6.94785 66.2932C6.73313 66.3678 6.61554 66.5317 6.59509 66.7851C6.59509 67.0609 6.70756 67.3106 6.93251 67.5342C7.15746 67.7578 7.44887 67.9404 7.80675 68.082C8.16462 68.2236 8.54806 68.3168 8.95705 68.3615L11.9172 68.6298L11.9172 69.7813L7.7454 69.4124C7.42842 69.39 7.16258 69.4236 6.94785 69.513C6.73313 69.595 6.61554 69.759 6.59509 70.0049C6.59509 70.2807 6.70756 70.5304 6.93251 70.754C7.15746 70.9701 7.45399 71.1527 7.82208 71.3018C8.17996 71.4434 8.55828 71.5328 8.95706 71.5701L11.9172 71.8384L11.9172 72.9787L5.4908 72.4086L5.4908 71.38Z"
+        fill="black"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M8 -3.03821e-08L8 59L7 59L7 0L8 -3.03821e-08Z"
+        fill="black"
+      />
+    </svg> -->
+    <nav class="navbar navbar-expand-lg fixed-top text-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/assets/images/influenxa-logo.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt="influenxa-logo"
+          />
+          Influenxa
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar ends -->
+
+    <!-- Hero Section -->
+    <div class="container-fluid hero-section">
+      <div class="row text-dark align-items-center">
+        <!-- First Column -->
+        <div class="col-md-6 justify-content-center">
+          <h2>We Bring <span>Customers</span></h2>
+          <p>
+            Et ullum iisque conclusionemque eam, mel ad erat cum accumsan
+            noluisse, nostrum accumsan movet salutandi. Fugit expetenda
+            interesset no, probo eloquentiam mei eu.
+          </p>
+          <button class="btn btn-light position-relative">
+            Find Out More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="8"
+              viewBox="0 0 64 8"
+              fill="none"
+              class="position-absolute"
+              style="top: 50%; transform: translateY(-50%)"
+            >
+              <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+              <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+            </svg>
+          </button>
+        </div>
+        <!-- Second Column -->
+        <div class="col-md-6">
+          <img
+            src="/assets/images/hero.png"
+            class="img-fluid"
+            alt="Hero Image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Hero ends -->
+
+    <!-- Partner logos -->
+    <div class="container-fluid partners">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-6 col-md-6 col-lg-auto">
+          <img
+            src="/assets/images/behance-logo.png"
+            alt="behance-logo"
+            class="img-fluid"
+            width="150px"
+            height="45px"
+          />
+        </div>
+        <div class="col-6 col-md-6 col-lg-auto">
+          <img
+            src="/assets/images/microsoft-logo.png"
+            alt="microsoft-logo"
+            class="img-fluid"
+            width="150px"
+            height="45px"
+          />
+        </div>
+        <div class="col-6 col-md-6 col-lg-auto">
+          <img
+            src="/assets/images/stripe-logo.png"
+            alt="stripe-logo"
+            class="img-fluid"
+            width="150px"
+            height="45px"
+          />
+        </div>
+        <div class="col-6 col-md-6 col-lg-auto">
+          <img
+            src="/assets/images/spotify-logo.png"
+            alt="spotify-logo"
+            class="img-fluid"
+            width="150px"
+            height="45px"
+          />
+        </div>
+        <div class="col-6 col-md-6 col-lg-auto">
+          <img
+            src="/assets/images/dropbox-logo.png"
+            alt="dropbox-logo"
+            class="img-fluid"
+            width="150px"
+            height="45px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- 1st campaign -->
+    <div class="container campaign mt-5">
+      <div class="row align-items-center g-3">
+        <div class="col-md-6 campaign">
+          <img
+            class="img-fluid"
+            src="/assets/images/card-1.png"
+            alt="campaign"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>Build Your Social <span>Marketing</span> With Us</h2>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomized words which don't look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum, you
+            need to be sure there isn't anything embarrassing hidden in the
+            middle of text. All the Lorem Ipsum generators on the Internet tend
+            to repeat
+          </p>
+          <ul class="custom-list">
+            <li>
+              <i class="fas fa-solid fa-angles-right"></i> Social Media
+              Marketing
+            </li>
+            <li>
+              <i class="fas fa-solid fa-angles-right"></i> Growth Business
+              Development
+            </li>
+            <li>
+              <i class="fas fa-solid fa-angles-right"></i> Market Research and
+              Content Marketing
+            </li>
+          </ul>
+
+          <button type="button">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services section -->
+    <!-- <div class="container services">
+      <div class="row my-5">
+        <div class="col services-card">
+          <p>SEO Analysis</p>
+          <h3>Developing Business Management Skills</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos consequuntur magni dolorem animi autem voluptate.
+          </p>
+          <button class="btn position-relative">
+            Find Out More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="8"
+              viewBox="0 0 64 8"
+              fill="none"
+              class="position-absolute"
+              style="top: 50%; transform: translateY(-50%)"
+            >
+              <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+              <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+            </svg>
+          </button>
+        </div>
+        <div class="col services-card">
+          <p>Content Writing</p>
+          <h3>Developing Business Management Skills</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos consequuntur magni dolorem animi autem voluptate.
+          </p>
+          <button class="btn btn-light position-relative">
+            Find Out More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="8"
+              viewBox="0 0 64 8"
+              fill="none"
+              class="position-absolute"
+              style="top: 50%; transform: translateY(-50%)"
+            >
+              <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+              <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+            </svg>
+          </button>
+        </div>
+        <div class="col services-card">
+          <p>MUSIC, VIDEOS</p>
+          <h3>Developing Business Management Skills</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos consequuntur magni dolorem animi autem voluptate.
+          </p>
+          <button class="btn btn-light position-relative">
+            Find Out More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="8"
+              viewBox="0 0 64 8"
+              fill="none"
+              class="position-absolute"
+              style="top: 50%; transform: translateY(-50%)"
+            >
+              <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+              <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container services mt-2">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div
+            class="card h-100 services-card border-right-0 border-bottom-0 border-top-0"
+          >
+            <div class="card-body">
+              <p>SEO Analysis</p>
+              <h3>Developing Business Management Skills</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos consequuntur magni dolorem animi autem voluptate.
+              </p>
+            </div>
+            <button class="btn">
+              Find Out More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="8"
+                viewBox="0 0 64 8"
+                fill="none"
+              >
+                <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+                <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <p>MUSIC, VIDEOS</p>
+              <h3>Developing Business Management Skills</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos consequuntur magni dolorem animi autem voluptate.
+              </p>
+            </div>
+            <button class="btn">
+              Find Out More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="8"
+                viewBox="0 0 64 8"
+                fill="none"
+              >
+                <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+                <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <p>SEO Analysis</p>
+              <h3>Developing Business Management Skills</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos consequuntur magni dolorem animi autem voluptate.
+              </p>
+            </div>
+            <button class="btn">
+              Find Out More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="8"
+                viewBox="0 0 64 8"
+                fill="none"
+              >
+                <line y1="4.5" x2="63" y2="4.5" stroke="black" />
+                <path d="M58.8916 1L63.0003 4.5L59.5764 7.5" stroke="black" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Repeat similar structure for other columns -->
+      </div>
+    </div>
+
+    <div class="container reachout-card">
+      <div class="row align-items-center">
+        <div class="col col-md-6">
+          <h2>What Can We Do For Your <span>Business</span></h2>
+          <p>
+            Learn more about the range of our services. Et ullum iisque
+            conclusionemque eam, mel ad erat cum accumsan noluisse, nostrum
+            accumsan movet salutandi. Fugit expetenda interesset no, probo
+            eloquentiam mei eu. Sea id malorum dolor.
+          </p>
+          <button type="button">Contact Us</button>
+        </div>
+        <div class="col col-md-6">
+          <div
+            id="cardCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="3000"
+          >
+            <!-- Adjust the interval (in milliseconds) for autoplay -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card border-0">
+                  <div class="card-body g-5">
+                    <img
+                      src="/assets/images/card-2.png"
+                      alt=""
+                      width="250px"
+                      height="250px"
+                    />
+                    <img
+                      src="/assets/images/card-3.png"
+                      alt=""
+                      width="250px"
+                      height="250px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card border-0">
+                  <div class="card-body g-5">
+                    <img
+                      src="/assets/images/card-2.png"
+                      alt=""
+                      width="250px"
+                      height="250px"
+                    />
+                    <img
+                      src="/assets/images/card-3.png"
+                      alt=""
+                      width="250px"
+                      height="250px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card border-0">
+                  <div class="card-body g-5">
+                    <img
+                      src="/assets/images/card-2.png"
+                      alt=""
+                      width="250px"
+                      height="250px"
+                    />
+                    <img
+                      src="/assets/images/card-3.png"
+                      alt=""
+                      width="250px"
+                      height="250px"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add more carousel items as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid team-reachout mt-5 my-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+          <h3>Talk to our Team</h3>
+          <p>
+            Learn more about the range of our services. Et ullum iisque
+            conclusion emque eam, mel ad erat
+          </p>
+        </div>
+        <div
+          class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end mt-3 mt-md-0"
+        >
+          <button type="button">Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Container -->
+    <div class="container-fluid">
+      <iframe
+        src="https://player.cloudinary.com/embed/?public_id=samples%2Fcld-sample-video&cloud_name=ds83mhjcm&player[posterOptions][transformation][startOffset]=3"
+        width="600"
+        height="200"
+        style="height: auto; width: 100%; aspect-ratio: 640 / 360"
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <div class="container ads-1 mt-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>The heart of our human centered <span>design skills </span></h2>
+          <p>
+            Et ullum iisque conclusionemque eam, mel ad erat cum accumsan ei
+            noluisse, nostrum accumsan salutandi eam cu. Fugit expetenda ei prim
+            interesset no his, probo mei eu eloquentiam. Sea id saepe dolores
+            sed malorum sapientem, copiosae et melnusquam nam an abhorreant.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Project strategy</li>
+            <li>UX research and conceptualization</li>
+            <li>Information architecture (IA)</li>
+            <li>User interface design (UI)</li>
+            <li>Interaction design (IxD)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelector(".navbar-toggler")
+        .addEventListener("click", function () {
+          var navbarNav = document.querySelector("#navbarNav");
+          if (window.innerWidth >= 767) {
+            // Adjust the breakpoint as needed
+            if (navbarNav.classList.contains("show")) {
+              navbarNav.classList.remove("show");
+            } else {
+              navbarNav.classList.add("show");
+            }
+          }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
