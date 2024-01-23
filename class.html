@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/class.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="button" onclick="validateLogin()">Login</button>
+      </form>
+      <p id="loginMessage"></p>
+    </div>
+    <script>
+      // let age = prompt("Enter your age");
+
+      // function getPassword() {
+      //   let password = prompt("Enter your password", "");
+
+      //   console.log("Entered password: " + password);
+      // }
+
+      // getPassword();
+
+      // Example 1:
+      let result1 = false && "Hello" && "";
+      console.log(result1); // Output: false
+
+      // Example 2:
+      let result2 = "World" && 0;
+      console.log(result2); // Output: 0
+
+      // Example 3:
+      let result3 = "Goodbye" && true && 42;
+      console.log(result3); // Output: 42
+
+      // Example 4:
+      let result4 = "" && null && undefined;
+      console.log(result4); // Output: ""let
+
+      let enteredUsername = getUserInput("Enter your username:");
+      let enteredPassword = getUserInput("Enter your password:");
+
+      // Check if both username and password are correct
+      if (
+        enteredUsername === "correctUsername" &&
+        enteredPassword === "correctPassword"
+      ) {
+        console.log("Login successful. Welcome!");
+        // Perform actions for authenticated users
+      } else {
+        console.log("Invalid username or password. Please try again.");
+        // Handle failed login attempt
+      }
+    </script>
+    <script src="/assets/js/class.js"></script>
+  </body>
+</html>
