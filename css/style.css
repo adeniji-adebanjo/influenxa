@@ -52,16 +52,13 @@ body {
 }
 .campaign .custom-list {
   list-style: none;
-  padding: 0;
 }
 .campaign .custom-list li {
-  margin-bottom: 0.5em; /* Adjust as needed */
+  margin-bottom: 10px;
 }
-.campaign .custom-list li:before {
-  content: "\f105"; /* Unicode character for the fa-angles-right icon */
-  font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
-  margin-right: 0.5em; /* Adjust as needed */
-  color: #333; /* Adjust the color as needed */
+.campaign .custom-list li i {
+  color: #f23802;
+  margin-right: 5px;
 }
 
 .services {

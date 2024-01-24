@@ -13,13 +13,25 @@
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required />
 
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <label for="number">Number:</label>
+        <input type="number" name="number" id="number" />
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required
+        />
 
         <button type="button" onclick="validateLogin()">Login</button>
       </form>
       <p id="loginMessage"></p>
     </div>
+
     <script>
       // let age = prompt("Enter your age");
 
