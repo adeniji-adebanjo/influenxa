@@ -121,6 +121,24 @@ body {
   font-family: $font-family-base;
 }
 
+.team {
+  @include title-span;
+  margin-top: 5rem;
+  h2 {
+    font-size: 45px;
+    font-weight: 600;
+  }
+}
+.patients {
+  @include font;
+  @include title-span;
+
+  #patients-text {
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
 // Mobile responsiveness
 @media (max-width: 992px) {
   .navbar-nav {
